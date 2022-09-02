@@ -1,21 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from './components/ItemListContainer';
-
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Counter from './components/Counter/ItemCount';
 
 
 function App() {
   
+  const stock = 10
+
   return (
     
     <div className="App">
       <NavBar/> 
-      <ItemListContainer greeting = 'Bienvenidos a Bike Machine'/>
-
+      <ItemListContainer greeting = 'Bienvenidos'/>
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
+      <Counter stock={stock}/> 
       </header>
     </div>
   );
