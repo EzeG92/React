@@ -12,9 +12,9 @@ function App() {
     
     <div className="App">
       <NavBar/> 
-      <ItemListContainer greeting = 'Bienvenidos'/>
       
       <header className="App-header">
+      <ItemListContainer greeting = 'Bienvenidos'/>
       <Counter stock={stock}/> 
       </header>
     </div>
