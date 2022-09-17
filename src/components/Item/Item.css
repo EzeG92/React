@@ -1,0 +1,21 @@
+.item {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;                       
+}
+
+.item h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 35px;
+}
+
+.item h3{
+    font-size: 20px;
+}

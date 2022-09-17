@@ -1,24 +1,103 @@
 import './NavBar.css';
+import logo from '../../images/logo.png';
 import Cart from '../Carrito/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
     
     return (
-    
-    <div className="menu">
-        
-        <nav>
+    <>
+    <div className='navbar'>
+        <div>
+            <NavLink to={'/'}>
+                <img src={logo} alt="logo" className='logo' />
+            </NavLink>
+            
+        </div>
+        <div className='menu'>
             <ul>
-                <li><a href="." className='ini'>Inicio </a></li>
-                <li><a href=".">Productos</a></li>
-                <li><a href=".">Quienes somos</a></li>
-                <li><a href=".">Como comprar</a></li>
-                <li><a href=".">Contacto</a></li>
-                <Cart/>
+                <li>
+                    <NavLink to={'/'} >
+                        Inicio
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
+                    to={'/category/cintas'}
+                    style ={({isActive}) => 
+                    isActive 
+                        ? {color: 'black'}
+                        : {color: 'white'} } 
+                        >
+                        Cintas
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
+                    to={'/category/bicis'}
+                    style ={({isActive}) => 
+                    isActive 
+                        ? {color: 'black'}
+                        : {color: 'white'} } 
+                        >
+                        Bicis
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
+                    to={'/category/elipticos'}
+                    style ={({isActive}) => 
+                    isActive 
+                        ? {color: 'black'}
+                        : {color: 'white'} } 
+                        >
+                        Elipticos
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
+                    to={'/category/bancos'}
+                    style ={({isActive}) => 
+                    isActive 
+                        ? {color: 'black'}
+                        : {color: 'white'} } 
+                        >
+                        Bancos
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink 
+                    to={'/category/accesorios'}
+                    style ={({isActive}) => 
+                    isActive 
+                        ? {color: 'black'}
+                        : {color: 'white'} } 
+                        >
+                        Accesorios
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink 
+                    to={'/contacto'} 
+                        style ={({isActive}) => 
+                        isActive 
+                            ? {color: 'black'}
+                            : {color: 'white'} }
+                        > 
+                        Contacto
+                    </NavLink>
+                </li>
             </ul>
-        </nav>
+        </div>
+        <div className='carrito2'>
+            <Cart/>
+        </div>
     </div>
+    </>
+
     )
     
 }
