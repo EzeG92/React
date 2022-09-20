@@ -1,6 +1,16 @@
 import './ItemDetail.css';
+import ItemCount from '../ItemCount/ItemCount';
+import {useState} from 'react';
+import { Link } from 'react-router-dom';
+
 
 const ItemDetail = ({item}) => {
+    const [counter, setCounter] = useState(0);
+
+    const handleClick = () => {
+        console.log(counter);
+    };
+
     return (
 
     <div class="container">
@@ -15,7 +25,8 @@ const ItemDetail = ({item}) => {
             <h2>{item.price}</h2>
             <p class="desc">{item.description}</p>
             <div class="buttons">
-                <button class="add">Agregar al carrito</button>
+                <ItemCount setCounter={setCounter} counter={counter} />
+            <Link to={'/cart'} onClick={handleClick}> Ir al carrito </Link>
             </div>
         </div>
 

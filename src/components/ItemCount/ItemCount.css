@@ -1,11 +1,18 @@
 .botones{
     display: flex;
-    flex-direction: column;
+    column-gap: 50px;
+    align-items: center;
     color: black;
+    width: 210px;
 
 }
 
+.botones h1{
+    color-interpolation-filters: ;
+}
+
 .boton1 {
+    display: flex;
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -25,14 +32,4 @@
     text-decoration: none;
     display: inline;
     font-size: 20px;
-}
-
-.contador h2 {
-    font-size: 20px;
-    color: black;
-}
-
-.contador h3 {
-    font-size: 15px;
-    color: black;
 }
