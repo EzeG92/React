@@ -1,7 +1,7 @@
 import './NavBar.css';
 import logo from '../../images/logo.png';
-import Cart from '../Carrito/CartWidget';
-import { NavLink } from 'react-router-dom';
+import Cart from '../Cart/Cart';
+import { NavLink, Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -93,7 +93,7 @@ const NavBar = () => {
             </ul>
         </div>
         <div className='carrito2'>
-            <Cart/>
+        <Link to='cart'>Carrito</Link>
         </div>
     </div>
     </>

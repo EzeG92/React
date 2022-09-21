@@ -1,9 +1,9 @@
 import './ItemCount.css'
 
-const ItemCount = ({setCounter, counter}) => {
+const ItemCount = ({setCounter, counter, stock}) => {
 
-    const sumar = () => counter <= 10 -1 ? setCounter( counter + 1) : alert('No hay stock suficiente')
-    const restar = () => counter > 0 ? setCounter(counter - 1) : alert('No se puede introducir valor negativo')
+    const sumar = () => counter <= stock - 1 ? setCounter( counter + 1) : alert('No hay stock suficiente')
+    const restar = () => counter > 1 ? setCounter(counter - 1) : alert('No puede agregar cero unidades')
     
     return (
 
