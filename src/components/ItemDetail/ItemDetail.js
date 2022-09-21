@@ -1,32 +1,34 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
 
 
 const ItemDetail = ({item}) => {
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(1);
+    const {addItem} = useContext(CartContext);
 
-    const handleClick = () => {
-        console.log(counter);
+    function onAdd (item) {
+        addItem(item, counter);
     };
 
     return (
 
-    <div class="container">
-
-        <div class="images">
+    <div className="container">
+        <Link to='/'>Volver</Link>
+        <div className="images">
             <img src={item.image} alt={item.title} />
         </div>
 
-        <div class="product"> 
+        <div className="product"> 
             <p>{item.category}</p>
             <h1>{item.title}</h1>
             <h2>{item.price}</h2>
-            <p class="desc">{item.description}</p>
-            <div class="buttons">
-                <ItemCount setCounter={setCounter} counter={counter} />
-            <Link to={'/cart'} onClick={handleClick}> Ir al carrito </Link>
+            <p className="desc">{item.description}</p>
+            <div className="buttons">
+                <ItemCount stock = {'10'} setCounter={setCounter} counter={counter} />
+            <Link to={'/cart'} onClick={() => onAdd(item)}> Agregar al carrito </Link>
             </div>
         </div>
 
