@@ -28,9 +28,9 @@ export const CartProvider = ({children}) => {
             } else {
                 newArray.push(item)
             }
-        })
+        });
         setCart(newArray)
-    }
+    };
 
 
     // const clear = () => {
@@ -39,7 +39,7 @@ export const CartProvider = ({children}) => {
 
     return(
 
-        <CartContext.Provider value ={{cart, addItem }}>
+        <CartContext.Provider value ={{cart, addItem, removeItem }}>
             {children}
         </CartContext.Provider>
     );
