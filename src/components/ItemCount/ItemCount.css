@@ -7,13 +7,10 @@
 
 }
 
-.botones h1{
-    color-interpolation-filters: ;
-}
 
 .boton1 {
     display: flex;
-    background-color: #4CAF50;
+    background-color:grey;
     border: none;
     color: white;
     padding: 10px;
@@ -24,7 +21,7 @@
 }
 
 .boton2 {
-    background-color: red;
+    background-color:grey;
     border: none;
     color: white;
     padding: 10px;

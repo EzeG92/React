@@ -1,6 +1,6 @@
 import './NavBar.css';
 import logo from '../../images/logo.png';
-import Cart from '../Cart/Cart';
+import CartWidget from '../CartWidget/CartWidget';
 import { NavLink, Link } from 'react-router-dom';
 
 
@@ -93,7 +93,9 @@ const NavBar = () => {
             </ul>
         </div>
         <div className='carrito2'>
-        <Link to='cart'>Carrito</Link>
+        <Link to='cart'>
+            <CartWidget />
+        </Link>
         </div>
     </div>
     </>

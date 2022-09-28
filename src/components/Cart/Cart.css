@@ -1,3 +1,38 @@
 .carrito {
     height: 45px;
 }
+
+.listCart{
+    display:flex; 
+    justify-content:start;
+    column-gap: 50px;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.titles h1 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.titles h2 {
+    font-size: 16px;
+}
+
+.titles h3 {
+    font-size: 14px;
+}
+
+.titles button {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 5px;
+    
+}
+
+.titles button:hover {
+    background-color: grey;
+}

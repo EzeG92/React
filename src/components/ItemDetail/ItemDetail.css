@@ -7,3 +7,15 @@
     display: flex;
     column-gap: 100px;
 }
+
+.add {
+    background-color:black;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.add:hover{
+    background-color: grey;
+}

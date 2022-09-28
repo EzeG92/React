@@ -24,11 +24,11 @@ const ItemDetail = ({item}) => {
         <div className="product"> 
             <p>{item.category}</p>
             <h1>{item.title}</h1>
-            <h2>{item.price}</h2>
+            <h2>${item.price}</h2>
             <p className="desc">{item.description}</p>
             <div className="buttons">
                 <ItemCount stock = {'10'} setCounter={setCounter} counter={counter} />
-            <Link to={'/cart'} onClick={() => onAdd(item)}> Agregar al carrito </Link>
+            <Link to={'/cart'} onClick={() => onAdd(item)} className='add'> Agregar al carrito </Link>
             </div>
         </div>
 
