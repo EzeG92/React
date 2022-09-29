@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const ItemList = ({ lista }) => {
 return (
     <div className="listaProductos">
+        
     {lista.map((product) => (
 
         <Link key={product.id} to={'/item/' + product.id} style={{textDecoration:'none'}} >

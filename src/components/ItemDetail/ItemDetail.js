@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/cartContext';
 
 
+
 const ItemDetail = ({item}) => {
     const [counter, setCounter] = useState(1);
     const {addItem} = useContext(CartContext);
@@ -18,7 +19,7 @@ const ItemDetail = ({item}) => {
     <div className="container">
         <Link to='/'>Volver</Link>
         <div className="images">
-            <img src={item.image} alt={item.title} />
+            <img src={'../img/' + item.image} alt={item.title} />
         </div>
 
         <div className="product"> 

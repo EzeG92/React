@@ -1,7 +1,7 @@
-import data from "../mockData";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
+import { getFirestore, getDocs, collection, query, where} from 'firebase/firestore';
 
 const ItemListContainer = () => {
     const [productList, setProductList] = useState([]);
@@ -9,17 +9,35 @@ const ItemListContainer = () => {
 
     console.log(category);
 
-    const getProducts = async () => {
-        if (category) {
-            const response = await data.filter(
-                (product) => product.category === category
-            );
-                setProductList(response);
+    const getProducts = () => {
+        const db = getFirestore();
+        const querySnapshot = collection(db, 'items');
+    
+        if(category){
+            const queryFilter = query(
+                querySnapshot, 
+                where("category", "==", category));
+
+            getDocs(queryFilter)
+            .then((response)=> {
+                const data = response.docs.map((doc) => {
+                    console.log(doc.data())
+                    return {id: doc.id, ...doc.data()};
+                });
+                setProductList(data);
+            });
         } else {
-            const response = await data;
-            setProductList(response);
-        }
-}; 
+            getDocs(querySnapshot)
+            .then((response)=> {
+                const data = response.docs.map((doc) => {
+                    console.log(doc.data());
+                    return {id: doc.id, ...doc.data()};
+                });
+                setProductList(data);
+            });
+    }
+};
+
 useEffect(() => {
     getProducts();
 }, [category]);

@@ -79,17 +79,6 @@ const NavBar = () => {
                     </NavLink>
                 </li>
 
-                <li>
-                    <NavLink 
-                    to={'/contacto'} 
-                        style ={({isActive}) => 
-                        isActive 
-                            ? {color: 'black'}
-                            : {color: 'white'} }
-                        > 
-                        Contacto
-                    </NavLink>
-                </li>
             </ul>
         </div>
         <div className='carrito2'>
