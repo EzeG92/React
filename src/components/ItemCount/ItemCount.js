@@ -1,9 +1,10 @@
 import './ItemCount.css'
+import Swal from 'sweetalert2'
 
 const ItemCount = ({setCounter, counter, stock}) => {
 
-    const sumar = () => counter <= stock - 1 ? setCounter( counter + 1) : alert('No hay stock suficiente')
-    const restar = () => counter > 1 ? setCounter(counter - 1) : alert('No puede agregar cero unidades')
+    const sumar = () => counter <= stock - 1 ? setCounter( counter + 1) : Swal.fire('No hay stock suficiente')
+    const restar = () => counter > 1 ? setCounter(counter - 1) : Swal.fire('No puede agregar menos de una unidad')
     
     return (
 

@@ -1,3 +1,16 @@
+.noProducts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.noProducts h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
 .carrito {
     height: 45px;
 }
@@ -10,6 +23,12 @@
     column-gap: 20px;
     margin-bottom: 50px;
     margin-top: 50px;
+    margin-left: 50px;
+}
+
+.totalPrice {
+    margin-left: 25px;
+    font-size: 22px;
 }
 
 .titles h1 {
@@ -26,7 +45,7 @@
 }
 
 .titles button {
-    background-color:black;
+    background-color:#537895;
     border: none;
     color: white;
     padding: 5px;
@@ -35,4 +54,44 @@
 
 .titles button:hover {
     background-color: grey;
+}
+
+.volver{
+    background-color:#537895;
+    height: 20px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.volver:hover{
+    background-color: grey;
+}
+
+.crearOrden {
+    background-color:#537895;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.crearOrden:hover {
+    background-color: grey;
+}
+
+h2#swal2-title {
+    font-size: 25px;
+}
+
+button.swal2-confirm.swal2-styled {
+    background-color: #537895;
+    border: none;
 }

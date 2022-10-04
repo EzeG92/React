@@ -8,11 +8,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 250px;                       
+    width: 250px;                   
 }
 
 .item h2 {
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     margin-top: 35px;
 }

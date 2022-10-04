@@ -17,7 +17,7 @@ const ItemDetail = ({item}) => {
     return (
 
     <div className="container">
-        <Link to='/'>Volver</Link>
+        <Link to='/' className='volver'>Volver</Link>
         <div className="images">
             <img src={'../img/' + item.image} alt={item.title} />
         </div>
@@ -27,8 +27,9 @@ const ItemDetail = ({item}) => {
             <h1>{item.title}</h1>
             <h2>${item.price}</h2>
             <p className="desc">{item.description}</p>
+            <p>Stock: {item.stock}</p>
             <div className="buttons">
-                <ItemCount stock = {'10'} setCounter={setCounter} counter={counter} />
+            <ItemCount stock = {'10'} setCounter={setCounter} counter={counter} />
             <Link to={'/cart'} onClick={() => onAdd(item)} className='add'> Agregar al carrito </Link>
             </div>
         </div>

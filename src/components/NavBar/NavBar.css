@@ -1,10 +1,12 @@
 .menu {
     margin-top: 15px;
-    margin-left: 350px;
+    margin-left: 400px;
+    justify-content: center;
 }
 
+
 .menu ul li {
-    display: inline-block;
+    display: inline-flex;
     position: center;
     font-size: 20px;
     padding: 10px;

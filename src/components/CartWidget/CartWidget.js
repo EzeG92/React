@@ -14,7 +14,9 @@ const CartWidget = () => {
 
     return (
         <div>
-            {cart.length === 0 ? ('') : (
+            {cart.length === 0 ? (
+                <Button variant="primary" ><img src={carrito} alt="carrito de compras" className='carrito'/></Button>
+            ) : (
                 <>
                 <Button variant="primary" >
                     <img src={carrito} alt="carrito de compras" className='carrito'/>

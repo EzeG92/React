@@ -10,7 +10,7 @@
 
 .boton1 {
     display: flex;
-    background-color:grey;
+    background-color:#537895;
     border: none;
     color: white;
     padding: 10px;
@@ -20,8 +20,13 @@
     font-size: 20px;
 }
 
+.boton1:hover{
+    background-color: grey;
+}
+
 .boton2 {
-    background-color:grey;
+    display: flex;
+    background-color:#537895;
     border: none;
     color: white;
     padding: 10px;
@@ -29,4 +34,16 @@
     text-decoration: none;
     display: inline;
     font-size: 20px;
+}
+
+.boton2:hover{
+    background-color: grey;
+}
+
+h2#swal2-title {
+    font-size: 25px;
+}
+
+button.swal2-confirm.swal2-styled {
+    background-color: #537895;
 }
