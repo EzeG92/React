@@ -21,16 +21,8 @@ export const CartProvider = ({children}) => {
     };
 
     const removeItem = (id) => {
-        let newArray = []; 
-        cart.forEach(item => {
-            if (item.id === id) {
-                console.log(item)
-            } else {
-                newArray.push(item)
-            }
-        });
-        setCart(newArray)
-    };
+        setCart(cart.filter((item) => item.id !== id));
+    }
 
     const totalPriceCart = () => {
         return cart.reduce ((acc, item) => acc + (item.price * item.quantity), 0)
@@ -42,7 +34,7 @@ export const CartProvider = ({children}) => {
 
     return(
 
-        <CartContext.Provider value ={{cart, addItem, removeItem, totalPriceCart, totalItemCart }}>
+        <CartContext.Provider value ={{cart, addItem, removeItem, totalPriceCart, totalItemCart}}>
             {children}
         </CartContext.Provider>
     );

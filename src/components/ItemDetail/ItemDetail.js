@@ -27,7 +27,7 @@ const ItemDetail = ({item}) => {
             <h1>{item.title}</h1>
             <h2>${item.price}</h2>
             <p className="desc">{item.description}</p>
-            <p>Stock: {item.stock}</p>
+            <p>Stock :{item.stock}</p>
             <div className="buttons">
             <ItemCount stock = {'10'} setCounter={setCounter} counter={counter} />
             <Link to={'/cart'} onClick={() => onAdd(item)} className='add'> Agregar al carrito </Link>

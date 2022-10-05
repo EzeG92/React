@@ -32,6 +32,7 @@ const Cart = () => {
         .catch(() => Swal.fire('Tu compra no pudo ser procesada'));
     }
 
+
     return (
         <div>
             
@@ -63,6 +64,7 @@ const Cart = () => {
             <div>
                 <button onClick={createOrder} className='crearOrden'>Crear orden</button>
             </div>
+            
                 </>
             )}
 
