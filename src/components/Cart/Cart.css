@@ -15,6 +15,7 @@
     height: 45px;
 }
 
+
 .listCart{
     display:flex; 
     justify-content:start;
@@ -27,7 +28,9 @@
 }
 
 .totalPrice {
-    margin-left: 25px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
     font-size: 22px;
 }
 
@@ -78,9 +81,9 @@
     color: white;
     text-decoration: none;
     padding: 5px;
-    margin-left: 5px;
     display: flex;
     justify-content: center;
+    margin-left: 1675px;
 }
 
 .crearOrden:hover {

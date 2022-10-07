@@ -3,12 +3,15 @@ import './Cart.css'
 import { useContext } from 'react'
 import { CartContext } from '../../context/cartContext'
 import { Link } from 'react-router-dom'
-import { collection, addDoc, getFirestore } from 'firebase/firestore'
+import { collection, addDoc, getFirestore, updateDoc, doc } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
 import moment from 'moment/moment'
 
 const Cart = () => {
     
-    const {cart, removeItem, totalPriceCart} = useContext(CartContext)
+    const {cart, removeItem, clear, totalPriceCart} = useContext(CartContext)
+    const navigate = useNavigate();
+    const db = getFirestore();
     
     const createOrder = () => {
         const db = getFirestore();
@@ -27,14 +30,40 @@ const Cart = () => {
         addDoc(query, order)
         .then(({id}) => {
             console.log(id);
+            updateStockProduct();
             Swal.fire('Felicidades por tu compra');
         })
         .catch(() => Swal.fire('Tu compra no pudo ser procesada'));
     }
 
+    const updateStockProduct = () => {
+
+        cart.forEach((product) => {
+            const queryUpdate = doc(db, 'items', product.id);
+    
+        updateDoc(queryUpdate, {
+            category: product.category,
+            description: product.description,
+            image: product.image,
+            price: product.price,
+            title: product.title,
+            stock: product.stock - product.quantity,
+        }).then(() => {
+                if (cart[cart.length - 1].id === product.id) {
+                clear();
+                navigate("/");
+                console.log("stock actualizado");
+                }
+            })
+            .catch(() => {
+                console.log("error al actualizar el stock");
+            });
+        });
+    };
+
 
     return (
-        <div>
+        <div className='boxCart'>
             
 
             {cart.length === 0 ? (

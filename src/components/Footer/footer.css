@@ -1,0 +1,30 @@
+.footer {
+    height: 150px;
+    display: flex;
+    column-gap: 100px;
+    background-color: black;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.footer p {
+    color: white;
+    text-transform: uppercase;
+}
+
+.logoFooter {
+    margin-top: 25px;
+    height: 60px;
+}
+
+.logoRedes {
+    height: 30px;
+    margin: 5px;
+}
+
+.separador {
+    height: 10px;
+    background-color: #537895;
+    margin-top: 280px;
+}
+

@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 250px;                   
+    width: 300px;                   
 }
 
 .item h2 {
@@ -20,3 +20,13 @@
 .item h3{
     font-size: 20px;
 }
+
+.itemBoton {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: -50px;
+    background-color: #537895;
+}
+
