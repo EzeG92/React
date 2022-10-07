@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
                     <p className="desc">{item.description}</p>
                     <p>Stock :{item.stock}</p>
                     <div className="buttons">
-                        <ItemCount stock={'10'} setCounter={setCounter} counter={counter} />
+                        <ItemCount stock={item.stock} setCounter={setCounter} counter={counter} />
                         <Link to={'/cart'} onClick={() => onAdd(item)} className='add'> Agregar al carrito </Link>
                     </div>
                 </div>
