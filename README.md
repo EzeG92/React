@@ -9,4 +9,5 @@ Ezequiel Gimenez: https://www.linkedin.com/in/ezequiel-gimenez-976025215/
 
 GIF demostracion funcionamiento del sitio
 
-![React_App_-_Google_Chrome_2022-10-07_13-18-51_AdobeExpress](https://user-images.githubusercontent.com/102333584/194612633-b8823547-e9b6-401f-99c2-453a69d1ed2b.gif)
+
+![React App - Google Chrome 2022-10-07 13-18-51](https://user-images.githubusercontent.com/102333584/194613051-da533426-6061-4ab5-8086-12e72940c3d5.gif)
